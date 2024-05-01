@@ -78,10 +78,10 @@ img {
   bottom: -1px;
   border-radius: 2px;
   position: absolute;
-  width: 100px;
+  width: 100%;
   height: 4px;
   background-color: #404bbf;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-list {
   display: flex;
@@ -116,7 +116,12 @@ img {
   color: #404bbf;
 }
 .menu-item {
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link {
@@ -176,13 +181,14 @@ img {
   height: 56px;
   border-radius: 4px;
   border: none;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .our-servis-bt:hover,
 .our-servis-bt:focus {
   background-color: #404bbf;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ================== BENEFITS STYLES================== */
@@ -288,6 +294,16 @@ img {
 .portfolio-item {
   width: calc((100% - 2 * 24px) / 3);
   position: relative;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover .portfolio-item:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-item:hover .overley-text .portfolio-item:focus .overley-text {
+  transform: translateY(0);
 }
 .title-portfolio {
   text-transform: capitalize;
@@ -313,24 +329,27 @@ img {
   letter-spacing: 0.02em;
 }
 .payment-overley {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
+  position: relative;
   background-color: #4d5ae5;
 }
 .portfolio-item:hover .payment-overley {
   display: block;
 }
 .overley-text {
-  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   font-size: 16px;
+  height: 100%;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  padding: 40px 32px;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-family: "Roboto", sans-serif;
+  background-color: #4d5ae5;
 }
 
 /* ===========FOOTER============ */
