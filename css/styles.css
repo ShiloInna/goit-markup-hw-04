@@ -240,6 +240,12 @@ img {
 }
 
 /* ==================TIME STYLES================== */
+.social-list {
+  gap: 24px;
+}
+.social-list-link {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .time-page {
   background-color: #f4f4fd;
   padding: 120px 0;
@@ -270,7 +276,8 @@ img {
   padding: 32px 0;
   text-align: center;
 }
-.social-list-link:hover {
+.social-list-link:hover,
+.social-list-link:focus {
   background-color: #31d0aa;
 }
 
@@ -313,12 +320,14 @@ img {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item:hover .portfolio-item:focus {
+.portfolio-item:hover,
+.portfolio-item:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.portfolio-item:hover .overley-text .portfolio-item:focus .overley-text {
+.portfolio-item:hover,
+.overley-text .portfolio-item:focus .overley-text {
   transform: translateY(0);
 }
 .title-portfolio {
